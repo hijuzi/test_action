@@ -36,6 +36,10 @@ jobs:
       - name: GitBook install plugins
         run: |
           gitbook install
+
+      - name: Init GitBook
+        run: |
+          gitbook init
           
       - name: Build GitBook in docs directory
         run: |
