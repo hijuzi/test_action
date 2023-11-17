@@ -12,6 +12,7 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
+          cache-dependency-path: ./package-lock.json
           
       - name: Cache node modules
         id: cache-npm
@@ -26,7 +27,12 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-            
+
+      - name: test npm
+        run: |
+          npm ci
+          npm test
+          
       - name: Install dependencies
         run: |
           npm install -g gitbook-cli
