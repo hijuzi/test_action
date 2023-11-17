@@ -43,7 +43,7 @@ jobs:
           
       - name: Build GitBook in docs directory
         run: |
-          gitbook build
+          gitbook build ./ ./docs
           
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
