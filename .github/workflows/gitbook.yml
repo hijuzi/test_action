@@ -13,18 +13,6 @@ jobs:
           node-version: 10
           cache: 'npm'
           cache-dependency-path: ./package-lock.json
-          
-      - name: Install dependencies
-        run: |
-          npm install -g gitbook-cli
-          
-      - name: try install sitemap-general plugins
-        run: |
-          npm install gitbook-plugin-sitemap-general
-        
-      - name: GitBook install plugins
-        run: |
-          gitbook install
 
       - name: Init GitBook
         run: |
