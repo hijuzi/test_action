@@ -17,6 +17,7 @@ jobs:
             ~/.npm
             ./node-modules
           key: ${{ env.cache-name }}-${{ runner.os }}-npm-${{ hashFiles('./package-lock.json') }}
+          run: ls -l
           
       - name: Setup Node.js
         uses: actions/setup-node@v4
