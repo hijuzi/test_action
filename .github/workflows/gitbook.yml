@@ -11,15 +11,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 10
-          cache: 'npm'
+          cache: 'node-modules'
           cache-dependency-path: ./package-lock.json
+          
       - name: Install dependencies
         run: |
           npm install -g gitbook-cli
           
       - name: try install sitemap-general plugins
         run: |
-          npm install gitbook-plugin-sitemap-general
+          npm install -g gitbook-plugin-sitemap-general
         
       - name: GitBook install plugins
         run: |
