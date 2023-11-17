@@ -32,7 +32,7 @@ jobs:
           
       - name: try install sitemap-general plugins
         run: |
-          npm install -g gitbook-plugin-sitemap-general
+          npm install gitbook-plugin-sitemap-general
         
       - name: GitBook install plugins
         run: |
