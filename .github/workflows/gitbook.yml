@@ -19,10 +19,20 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+            
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: '10.x'
           
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install -g gitbook-cli
+      - name: GitBook install plugins
+        run: |
+          gitbook install
+
+      - name: Build GitBook in docs directory
+        run: |
+          gitbook build ./ ./docs
+
