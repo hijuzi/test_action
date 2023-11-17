@@ -30,7 +30,6 @@ jobs:
 
       - name: test npm
         run: |
-          npm ci
           npm test
           
       - name: Install dependencies
