@@ -36,7 +36,7 @@ jobs:
         
       - name: GitBook install plugins
         run: |
-          gitbook install
+          gitbook install -g
           
       - name: Init GitBook
         run: |
