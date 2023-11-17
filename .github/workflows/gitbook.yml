@@ -6,14 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 10
-          cache: 'npm'
-          cache-dependency-path: ./package-lock.json
-
       - name: Cache node modules
         id: cache-npm
         uses: actions/cache@v3
@@ -25,6 +17,15 @@ jobs:
             ~/.npm
             ./node-modules
           key: ${{ env.cache-name }}-${{ runner.os }}-npm-${{ hashFiles('./package-lock.json') }}
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 10
+          # cache: 'npm'
+          # cache-dependency-path: ./package-lock.json
+
+      
             
       - name: Install dependencies
         run: |
