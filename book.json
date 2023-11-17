@@ -1,0 +1,84 @@
+{
+    "plugins": [
+        "favicon",
+        "yahei",
+        "github",
+        "autotheme",
+        "-lunr",
+        "-search",
+        "search-plus",
+        "prism",
+        "-highlight",
+        "splitter",
+        "-sharing",
+        "tbfed-pagefooter",
+        "expandable-chapters-small",
+        "book-summary-scroll-position-saver",
+        "anchors",
+        "anchor-navigation-ex",
+        "copy-code-button",
+        "multipart"
+    ],
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
+        "fontSettings": {
+            "family": "serif",
+            "size": 2
+        },
+        "autotheme": {
+            "white": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17
+            ],
+            "sepia": [
+                6,
+                7,
+                8,
+                18,
+                19
+            ],
+            "night": [
+                20,
+                21,
+                22,
+                23,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-tomorrow.css"
+            ]
+        },
+        "tbfed-pagefooter": {
+            "copyright": "Copyright &copy <a href='https://duliyouxijuzi.github.io' target='_blank'>独立游戏橘子</a> 2019-2023",
+            "modify_label": "修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+    },
+    "title": "独立游戏橘子的关于编程语言内容",
+    "description": "独立游戏橘子的关于编程语言内容",
+    "author": "独立游戏橘子",
+    "language": "zh-hans",
+    "root": ".",
+    "links": {
+        "sidebar": {
+            "GitHub": "https://github.com/duliyouxijuzi",
+            "个人博客": "https://duliyouxijuzi.github.io"
+        }
+    }
+}
